@@ -1,4 +1,4 @@
-# KiCad Reorder Schematic Fields (ABSOLUTE ORDER)
+# KiCad Reorder Schematic Fields
 
 
 A safe, GUI-based KiCad Action Plugin to **reorder user `(property ...)` fields** in `.kicad_sch` files so they match an **absolute target order** you define. Core/meta fields (Reference, Value, Footprint, Datasheet, Description, `ki_*`) are never touched.
