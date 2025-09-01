@@ -1,4 +1,4 @@
-# KiCad Reorder Schematic Fields
+# KiCad Reorder Schematic Fields Plugin
 
 
 A safe, GUI-based KiCad Action Plugin to **reorder user `(property ...)` fields** in `.kicad_sch` files so they match an **absolute target order** you define. Core/meta fields (Reference, Value, Footprint, Datasheet, Description, `ki_*`) are never touched.
@@ -19,7 +19,6 @@ Consistent field ordering helps readability, automation, and downstream tooling.
 - **Absolute order**: every symbol’s *user* fields are reordered to match your GUI list (top to bottom).
 - **Non-destructive**: core/meta fields are never moved or modified.
 - **Per-schematic JSON**: `<schema>.kicad_sch.reorder.json` stores the order for this schematic.
-- **Project default JSON**: `.reorder_fields.json` (in the same folder) is used if no per-schematic file exists.
 - **Merge on load**: new fields found in the schematic are appended to your saved order (so nothing is lost).
 - **Dry-run mode**: preview without writing.
 
@@ -44,11 +43,9 @@ Consistent field ordering helps readability, automation, and downstream tooling.
 
 ## Persistence (JSON)
 - **Per schematic**: `<schema>.kicad_sch.reorder.json` (preferred).
-- **Project default**: `.reorder_fields.json` (fallback if the per-schematic file doesn’t exist).
-- **Load precedence**: per-schematic → project default → detected order from the file.
+- **Load precedence**: per-schematic detected order from the file.
 - **Reset buttons**:
-- **Reset (this schematic)**: delete the per-schematic JSON only.
-- **Reset (project default)**: delete `.reorder_fields.json` only.
+- **Reset this schematic Order**: delete the saved default per-schematic order JSON only.
 
 
 ## Safety
