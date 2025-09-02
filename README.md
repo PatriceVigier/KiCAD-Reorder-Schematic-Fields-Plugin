@@ -70,7 +70,7 @@ try: self.show_toolbar_button = False
 around line 579
 
 ## Screenshot
-![Alt text for accessibility](assets/V_eeschema_reorder_fields_plugin.jpg)
+![Alt text for accessibility](assets/V_SC_eeschema_reorder_fields_plugin.jpg)
 
 ## License
 MIT — see [LICENSE](LICENSE).
