@@ -24,7 +24,7 @@ Consistent field ordering helps readability, automation, and downstream tooling.
 
 
 ## Installation
-1. Copy `ReorderSchematicFieldsPlugin_absolute_v7_0.py` (and optionally `V_eeschema_reorder_fields_plugin.png`) to:
+1. Copy `V_eeschema_reorder_fields_plugin.py` (and optionally `V_eeschema_reorder_fields_plugin.png`) to:
 - Windows: `%APPDATA%\kicad\<6.0|7.0|8.0|9.0>\scripting\plugins\`
 2. Restart KiCad.
 3. In Eeschema: `Tools → External Plugins → Reorder schematic fields…`
@@ -62,6 +62,15 @@ Consistent field ordering helps readability, automation, and downstream tooling.
 - Code is a single Python ActionPlugin for KiCad (wxPython UI). No external deps.
 - See inline comments for architecture and parsing details.
 
+ ## Custom change
+If you do not want the plugin icon in the toolbar change  
+try: self.show_toolbar_button = True  
+to  
+try: self.show_toolbar_button = False  
+around line 579
+
+## Screenshot
+![Alt text for accessibility](assets/V_eeschema_reorder_fields_plugin.jpg)
 
 ## License
 MIT — see [LICENSE](LICENSE).
